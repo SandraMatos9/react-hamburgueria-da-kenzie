@@ -1,50 +1,57 @@
+
 import styled from "styled-components";
 
-
-export const liRenderizado = styled.li ` 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 10px;
-    gap: 21px;
-    width: 343px;
-    height: 80px;
-    background: #F5F5F5;
-    border-radius: 0px 0px 5px 5px;
+export const StyledUlRenderizado = styled.ul`
+list-style: none;
 `
-export const StyledImgRenderizada = styled.img `
+export const StyledLiRenderizado = styled.li`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom:20px ;
+  height: 80px;
+  background: #f5f5f5;
+  border-radius: 0px 0px 5px 5px;
+  list-style: none;
+  width: 100%;
+
+  & .imgRenderizada {
     width: 70px;
     height: 70px;
-`
+    background-color: #E0E0E0;
+  }
 
-export const StyledDivnameCategory = styled.div `
+  & .divnameCategory {
     display: flex;
     flex-direction: column;
-`
-export const StyledNameRenderizado = styled.p `
-    font-family: 'Inter';
+  }
+
+  & .nameRenderizado {
+    font-family: "Inter";
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
     color: #333333;
-`
+  }
 
-export const StyledCategoryRenderizada = styled.p`
-    font-family: 'Inter';
+  & .categoryRenderizada {
+    font-family: "Inter";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
     color: #828282;
-`
-export const StyledBtnRenderizado = styled.button`
-    font-family: 'Inter';
+  }
+
+  & .btnRenderizado {
+    font-family: "Inter";
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
-    color: #BDBDBD;
+    color: #bdbdbd;
     border: none;
-`
+  }
+`;

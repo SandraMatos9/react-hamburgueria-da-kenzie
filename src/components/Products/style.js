@@ -1,45 +1,43 @@
 import styled from "styled-components";
 
 export const StyledLiCard = styled.li`
-   box-sizing: border-box;
-    width: 300px;
-    height: 346px;
-    background: #FFFFFF;
-    border: 2px solid #E0E0E0;
-    border-radius: 5px;
-`
-export const StyledpNomePedido = styled.p`
-    font-family: 'Inter';
+  box-sizing: border-box;
+  width: 300px;
+  height: 346px;
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+
+  & p.pNomePedido {
+    font-family: "Inter";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
     color: #333333;
     margin-left: 21px;
-`
+  }
 
-export const StyledPCategoria = styled.p `
-    font-family: 'Inter';
+  & p.pCategoria {
+    font-family: "Inter";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
     color: #828282;
     margin-left: 21px;
-`
-
-export const StyledPPrecoPedido= styled.p`
-    font-family: 'Inter';
+  }
+  & p.pPrecoPedido {
+    font-family: "Inter";
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
-    color: #27AE60;
+    color: #27ae60;
     margin-left: 21px;
-`
+  }
 
-
-export const StyledBtnAdicionar=styled.button`
+  & button.btnAdicionar {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -49,31 +47,27 @@ export const StyledBtnAdicionar=styled.button`
     gap: 10px;
     width: 106px;
     height: 40px;
-    background: #27AE60;
-    border: 2px solid #27AE60;
+    background: #27ae60;
+    border: 2px solid #27ae60;
     border-radius: 8px;
     margin-left: 21px;
-    color: #FFFFFF;
-`
+    color: #ffffff;
+  }
 
+  & button:hover.btnAdicionar {
+    background-color: #93d7af;
+  }
+`;
 
-// .btnAdicionar:hover{
-//     background-color: #93D7AF;
-// }
+export const StyledDivImagem = styled.div`
+  background: #f5f5f5;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 
-export const StyledPImgPedido = styled.img`
-   width: 300px;
+  img {
+    width: 150px;
     height: 150px;
-    background: #F5F5F5;
-`
-
-export const StyledDivImagem = styled.div ` 
-    background: #F5F5F5;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
-`
-
-
-
+  }
+`;

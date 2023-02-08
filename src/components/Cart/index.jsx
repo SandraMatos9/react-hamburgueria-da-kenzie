@@ -1,46 +1,55 @@
-import { CartProduct } from '../CartProduct'
-import './style.js'
+import { CartProduct } from '../CartProduct';
+import './style.js';
 import styled from 'styled-components';
+import { StyledDivCart } from './style.js';
+import { TotalCart } from '../TotalCart';
 
 
-export function Cart() {
+export function Cart({ currentSale, setcurrenSale }) {
+
+
+   
 
     return (
-        <div className='divCart'>
+        <StyledDivCart>
+
             <p className='pCart'>Carrinho de compras</p>
 
-                {/* {
-                    filteredProducts.length === 0 ? (
-                        <>
-                            <p className='pSacolaVazia'>Sua sacola está vazia</p>
-                            <p className='pAdicioneItens'>Adicione itens</p>
+            {
+                currentSale.length === 0 ? (
+                    <div className='divSacolaVazia'>
+                        <p className='pSacolaVazia'>Sua sacola está vazia</p>
+                        <p className='pAdicioneItens'>Adicione itens</p>
 
-                        </>
+                    </div>
 
-                    ) : (
-                        <ul className='ulCart'>
-                            {
-                                listTransactions.map((dados, index) => {
-                                    return (
-                                        <li key={index} className="liCard">
-                                            <CartProduct />
-
-
-                                        </li>
-
-                                    )
-
-                                })
-                            }
-                        </ul>
-                    )} */}
+                ) : (
+                <>
+                 <ul className='ulCart'>
+                        {
+                            currentSale.map((dados, index) => {
+                                
+                                return (
+                                    <li key={index} className="liCard">
+                                        <CartProduct dados={dados} currentSale={currentSale} setcurrenSale={setcurrenSale} />
 
 
+                                    </li>
+
+                                )
+
+                            })
+                        }
+
+                    </ul>
+                    <TotalCart currentSale={currentSale} setcurrenSale={setcurrenSale}/>
+
+                
+                </>
+                   
+                )}
 
 
-
-
-
-        </div>
+        </StyledDivCart>
     )
 }
